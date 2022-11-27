@@ -285,7 +285,7 @@ def pregunta_11():
         Archivo = csv.reader(ArchivoCSV, delimiter='	')
         for i in Archivo:
             for j in i[3].split(','):
-                if not j in i.keys():
+                if not j in Letras.keys():
                     Letras[j] = int(i[1])
                 else:
                     Letras[j] += int(i[1])
