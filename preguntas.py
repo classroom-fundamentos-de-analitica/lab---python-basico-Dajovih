@@ -315,11 +315,11 @@ def pregunta_12():
         Archivo = csv.reader(ArchivoCSV, delimiter='	')
         for i in Archivo:
             for j in i[4].split(','):
-                N=int(j.split(':')[1])
+                Numero = int(j.split(':')[1])
                 if not i[0] in Letras.keys():
-                    Letras[i[0]]=N
+                    Letras[i[0]]=Numero
                 else:
-                    Letras[i[0]]+=N
+                    Letras[i[0]]+=Numero
     return dict(sorted(Letras.items()))
     """
     Genere un diccionario que contengan como clave la columna 1 y como valor la suma de
